@@ -1,0 +1,55 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+<div class="col offset-3">
+ 
+    <div class="card m-5" style="width: 100%;">
+  <img src="<%=specificlisting.image%>" class="show-img" alt="Image of <%=specificlisting.title%>">
+  <div class="card-body">
+   <h2><%=specificlisting.title%></h2>
+    <p><%=specificlisting.description%></p>
+   <p>Price: &#8377;<%= specificlisting.price.toLocaleString("en-IN") %></p>
+
+    <p>Location: <%=specificlisting.location%></p>
+  </div>
+</div>
+   <div class="row">
+    <div class="col-1 offset-1">
+   <a href="/listings/<%=specificlisting._id%>/edit" class="btn btn-danger">Edit</a></div>
+  
+   <div class="col-1">
+<form method="POST" action="/listings/<%=specificlisting._id%>?_method=DELETE">
+  <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+</div>
+<div class="col-10"></div>
+</div>
+  </div>
+<div class="review col offset-3 mt-5" >
+  <hr>
+  <h4>PLEASE LEAVE A REVIEW</h4>
+  <form method="post" action="/listings/<%=specificlisting._id%>/reviews" class="needs-validation" novalidate>
+    <lable for="rating"  class="form-label">Rating[1-5]:</lable>
+    <input type="range" id="rating" name="rating" min="1" max="5" class="form-range" required>
+    <lable for="comment"  class="form-label">comment:</lable>
+    <br><br>
+    <textarea id="comment" name="comment" rows="4" cols="50" class="form-control" required></textarea>
+    <div class="invalid-feedback">
+   please enter a comment
+    </div>
+    <br><br>
+    <button type="submit" class="btn btn-danger">Submit</button>
+  </form>
+</div>
+<hr>
+<h4>All Reviews</h4>
+<ul>
+  <%for(let review of specificlisting.reviews) {%>
+    <li>
+      <strong>Rating:</strong> <%= review.rating %>&nbsp;
+      <strong>Comment:</strong> <%= review.comment %><br>
+    
+    </li>
+  <%}%>
+</ul>
+
+</body>

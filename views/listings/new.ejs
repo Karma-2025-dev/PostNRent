@@ -1,0 +1,63 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+    <h1>Add New Listing</h1>
+    <p>Fill  the details below:</p>
+    <div class="row">
+        <div class="col-6 offset-2">
+    <form method="POST" action="/listings" novalidate class="needs-validation" >
+
+        <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="title">Title</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title" name="title" required>
+
+<div class="invalid-feedback">
+   enter a title
+    </div>
+    </div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="description" required></textarea>
+
+       <div class="invalid-feedback">
+   enter a description
+    </div>
+    </div>
+        <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="title" >Price</label>
+  <input type="number" class="form-control" id="exampleFormControlInput1" name="price" placeholder="price" required>
+
+<div class="invalid-feedback">
+   enter a price
+    </div>
+    </div>
+ <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="title">Location</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" name="location" placeholder="location" required>
+
+<div class="invalid-feedback">
+   enter a location
+    </div>
+    </div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="title">Image</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" name="image" placeholder="image url">
+
+<div class="invalid-feedback">
+   enter a image
+    </div>
+    </div>
+        <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="title">Country</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" name="country" placeholder="country" required>
+
+       
+       <div class="invalid-feedback">
+   enter a country
+    </div>
+     </div>
+       <button type="submit" class="btn btn-danger">Add Listing</button>
+       
+    </form>
+    </div>
+    </div>
+</body>

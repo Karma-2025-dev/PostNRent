@@ -1,0 +1,51 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+    <h1>Edit Listing</h1>
+  
+    <div class="row">
+        <div class="col-6 offset-2">
+    <form method="POST" action="/listings/<%=editlisting._id%>?_method=PUT">
+
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="title">Title</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title" name="title" value="<%=editlisting.title%>">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="description" value="<%=editlisting.description%>"><%=editlisting.description%></textarea>
+</div>
+       
+        <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="title">Price</label>
+  <input type="number" class="form-control" id="exampleFormControlInput1" name="price" placeholder="price"  value="<%=editlisting.price%>">
+</div>
+
+ <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="title">Location</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" name="location" placeholder="location" value="<%=editlisting.location%>">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="title">Image</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" name="image" placeholder="image url"  value="<%=editlisting.image%>">
+</div>
+        <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="title">Country</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" name="country" placeholder="country"  value="<%=editlisting.country%>">
+</div>
+       
+       
+     
+       <button type="submit" class="btn btn-danger"> Update</button>
+
+        <!-- <input type="text" name="title" placeholder="title" value="<%=editlisting.title%>"><br><br><br> -->
+        <!-- <input type="text" name="description" placeholder="description" value="<%=editlisting.description%>"><br><br><br> -->
+        <!-- <input type="text" name="price" placeholder="price" value="<%=editlisting.price%>"><br><br><br> -->
+        <!-- <input type="text" name="location" placeholder="location" value="<%=editlisting.location%>"><br><br><br> -->
+        <!-- <input type="text" name="image" placeholder="image" value="<%=editlisting.image%>"><br><br><br> -->
+        <!-- <input type="text" name="country" placeholder="country" value="<%=editlisting.country%>"><br><br><br> -->
+        <!-- <input type="submit" value="Edit Listing"> -->
+    </form>
+    </div>
+    </div>
+</body>

@@ -1,0 +1,40 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+    <h1>SignUp on PosTnRenT</h1>
+    <p>Fill  the details below:</p>
+    <div class="row">
+        <div class="col-6 offset-2">
+    <form method="POST" action="/register" novalidate class="needs-validation" >
+        
+        <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="username">Username</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username" name="username" required>
+
+<div class="invalid-feedback">
+   enter a username
+    </div>
+    </div>
+
+      <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="email">Email</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" name="email" required>
+
+<div class="invalid-feedback">
+   enter an email
+    </div>
+    </div>
+
+     <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" name="password">Password</label>
+  <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="password" name="password" required>
+
+<div class="invalid-feedback">
+   enter a password
+    </div>
+    </div>
+    <button type="submit" class="btn btn-danger">SignUp</button>
+    </form>
+    </div>
+    </div>
+
+</body>

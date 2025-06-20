@@ -1,0 +1,27 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+
+    <h1 style="color: rgb(247, 42, 15);"><u> POST AND RENT FOR GRAPHIC ERA STUDENTS</u></h1>
+
+    <hr></hr>
+     
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 ">
+       <%for(let i = 0; i < alllistings.length; i++) {%>  
+        <a href="/listings/show/<%=alllistings[i]._id%>" style="text-decoration: none; color: black;">
+        <div class="card col" >
+  <img src="<%=alllistings[i].image%>" class="card-img-top" alt="Listing Image " style="height: 20rem;">
+  <div class="card-img-overlay">
+    
+  </div>
+  <div class="card-body">
+    <p class="card-text"><b><%= alllistings[i].title %></b></p>
+   
+    <p class="card-text">Price: &#8377;<%= alllistings[i].price.toLocaleString("en-IN") %>/night</p>
+   
+  </div>
+</div>
+</a>
+  <%}%>
+ 
+ 
+</body>
